@@ -10,11 +10,17 @@ Approach:
 The system uses computer vision techniques to detect hand gestures, which are then classified into corresponding alphabetic characters. Key stages of the project include:
 
 Hand Detection: Using MediaPipe and OpenCV, the system identifies and tracks the hand in a live video stream from the user's webcam. It then crops and processes the hand image for classification.
+
 Real-Time Classification: A Convolutional Neural Network (CNN) is trained to recognize individual alphabetic signs. This model is trained using a custom dataset, which includes over 500-1000 images per letter to ensure high accuracy.
+
 Dataset: A custom dataset of hand signs was collected, consisting of more than 500 images per letter. The data was carefully pre-processed to maintain uniformity and accuracy in training the model.
+
 Preprocessing and Resizing: The cropped hand gesture is resized to maintain the aspect ratio, ensuring consistent input dimensions for the model. This is critical for the performance of the deep learning model.
+
 Classification: TensorFlow and Google Teachable Machine are used to build and train the deep learning model. The system leverages a CNN to classify the input images, providing predictions in real time.
+
 Technologies Used:
+
 TensorFlow: For building and training the Convolutional Neural Network (CNN) used to classify the hand gestures into alphabets.
 MediaPipe: For efficient and fast hand tracking, detection, and landmark identification.
 Google Teachable Machine: To simplify the training and testing of the model, providing an intuitive interface for building machine learning models.
