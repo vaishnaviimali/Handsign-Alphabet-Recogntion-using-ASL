@@ -91,9 +91,9 @@ pip install tensorflow opencv-python mediapipe cvzone numpy
 ## Usage
 1. Data Collection
 - Ensure your webcam is connected.
-- Run the data_collection.py script to capture images of each alphabet gesture:
+- Run the DataCollection.py script to capture images of each alphabet gesture:
 ```bash
-python data_collection.py
+python DataCollection.py
 ```
 - Perform standard American Sign Language (ASL) hand sign alphabets and press 's' to save an image during capture. Images will be saved in folders corresponding to each alphabet.
 
@@ -105,7 +105,7 @@ python data_collection.py
 3. Testing
 - After training, create separate folder to save model and its labels after that use the test.py script to test the model with real-time hand gestures:
 ```bash
-python test_model.py
+python test.py
 ```
 
 Thank you for checking out this project! If you find it helpful, please consider giving it a ⭐️ on GitHub.
