@@ -40,8 +40,8 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/vaishnaviimali/handsign-recognition-usingASL.git
-    cd handsign-recognition-usingASL
+    git clone https://github.com/vaishnaviimali/Handsign-Alphabet-Recogntion-using-ASL.git
+    cd Handsign-Alphabet-Recogntion-using-ASL
     ```
 
 2. Install the required dependencies:
@@ -95,7 +95,7 @@ pip install tensorflow opencv-python mediapipe cvzone numpy
 ```bash
 python data_collection.py
 ```
-- Press 's' to save an image during capture. Images will be saved in folders corresponding to each alphabet.
+- Perform standard American Sign Language (ASL) hand sign alphabets and press 's' to save an image during capture. Images will be saved in folders corresponding to each alphabet.
 
 2. Model Training
 - Visit Google Teachable Machine.
