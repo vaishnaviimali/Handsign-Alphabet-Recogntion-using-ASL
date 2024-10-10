@@ -1,44 +1,112 @@
-# Handsign Alphabet Recognition-usingASL
-This project focuses on real-time recognition of sign language alphabets, offering a seamless solution for bridging communication gaps between individuals who use sign language and those who do not. The system captures hand gestures via a webcam and classifies them into corresponding alphabets from the American Sign Language (ASL) alphabet.
+# Sign Language Alphabet Recognition
 
-Problem Statement:
+## Overview
 
-Sign language is the primary method of communication for many people with hearing impairments. However, a significant communication barrier exists when interacting with people who are unfamiliar with sign language. This project aims to reduce this barrier by creating a system that can recognize and interpret sign language alphabets in real time, making it easier for non-signers to understand basic gestures without the need for a human translator.
+The **Sign Language Alphabet Recognition** project is aimed at providing real-time recognition of hand gestures representing the alphabets in American Sign Language (ASL). By leveraging deep learning and computer vision, this system can classify hand gestures into corresponding alphabetic characters with high accuracy. This solution helps bridge the communication gap between sign language users and non-sign language users.
 
-Approach:
+### Problem Statement
+Sign language is a critical method of communication for individuals with hearing impairments, but it can be challenging for non-signers to understand. This project aims to address this issue by creating a real-time system that recognizes hand gestures and translates them into alphabetic characters, enabling better interaction between sign language users and non-users.
 
-The system uses computer vision techniques to detect hand gestures, which are then classified into corresponding alphabetic characters. Key stages of the project include:
+### Key Features
+- **Real-time Detection**: Detects and classifies hand gestures in real time from a live video stream.
+- **High Accuracy**: The model is trained on a custom dataset containing over 500-1000 images per alphabet.
+- **User-friendly Interface**: The system provides immediate feedback, displaying the recognized alphabet as the gesture is made.
 
-Hand Detection: Using MediaPipe and OpenCV, the system identifies and tracks the hand in a live video stream from the user's webcam. It then crops and processes the hand image for classification.
+## Technologies Used
+- **TensorFlow**: For building and training the Convolutional Neural Network (CNN) that classifies hand gestures into alphabets.
+- **MediaPipe**: For hand tracking and landmark identification, facilitating gesture detection.
+- **Google Teachable Machine**: To simplify training and deploying machine learning models.
+- **OpenCV**: For real-time video capture, hand detection, and image preprocessing.
+- **Python**: For implementing the overall project pipeline.
+- **Computer Vision**: For detecting and preprocessing hand gestures.
 
-Real-Time Classification: A Convolutional Neural Network (CNN) is trained to recognize individual alphabetic signs. This model is trained using a custom dataset, which includes over 500-1000 images per letter to ensure high accuracy.
+## Future Advancements
+- **Next Alphabet Prediction**: We plan to implement a feature that predicts the next alphabet based on the recognized hand gesture.
+- **Word & Sentence Recognition**: Expanding the model to recognize full words or sentences using sign language grammar.
 
-Dataset: A custom dataset of hand signs was collected, consisting of more than 500 images per letter. The data was carefully pre-processed to maintain uniformity and accuracy in training the model.
+## Dataset
+The dataset for this project can be created manually using the provided data collection script. It consists of **500-1000 images per alphabet**, representing different hand gestures for each letter of the ASL alphabet.
 
-Preprocessing and Resizing: The cropped hand gesture is resized to maintain the aspect ratio, ensuring consistent input dimensions for the model. This is critical for the performance of the deep learning model.
+### Dataset Collection
+1. Use the **data collection script** to capture hand gesture images.
+2. The images are saved in separate folders for each alphabet.
 
-Classification: TensorFlow and Google Teachable Machine are used to build and train the deep learning model. The system leverages a CNN to classify the input images, providing predictions in real time.
+### Dataset Training
+The dataset is trained on **Google Teachable Machine**, a user-friendly platform for creating machine learning models.
 
-Technologies Used:
+## Installation
 
-TensorFlow: For building and training the Convolutional Neural Network (CNN) used to classify the hand gestures into alphabets.
-MediaPipe: For efficient and fast hand tracking, detection, and landmark identification.
-Google Teachable Machine: To simplify the training and testing of the model, providing an intuitive interface for building machine learning models.
-OpenCV: For video capture, hand gesture cropping, and real-time processing of hand images.
-Python: For the overall integration of various modules and building the project pipeline.
-Computer Vision: For hand tracking, preprocessing, and gesture recognition.
-CNN (Convolutional Neural Network): For accurate and efficient classification of sign language alphabets.
-Future Advancements:
+To run this project locally, follow these steps:
 
-As part of future improvements, the project aims to implement a predictive model that can anticipate the next alphabet based on the current recognized hand gesture. This would further enhance communication by reducing the need for redundant gestures and improving prediction speed. Additionally, expanding the model to recognize full words or sentences by incorporating sign language grammar is another long-term goal.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/vaishnaviimali/handsign-recognition-usingASL.git
+    cd handsign-recognition-usingASL
+    ```
 
-Key Features:
+2. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Real-time Detection: The system processes live video feeds to detect and classify hand gestures instantaneously.
-Custom Dataset: Over 500-1000 images per alphabet are used to ensure robustness and accuracy of the model.
-Accurate Classification: With the help of a CNN, the model achieves efficient and accurate classification results.
-Seamless Interaction: A user-friendly interface and real-time feedback make the system practical for daily use.
-How to Use:
-Clone the repository and install the required dependencies.
-Run the provided Python script to launch the system.
-Use a webcam to display hand gestures, and the system will detect and classify the corresponding alphabet in real time.
+3. Run the **data collection script** to capture hand gesture images:
+    ```bash
+    python DataCollection.py
+    ```
+
+4. Train the dataset on **Google Teachable Machine**. Once trained, export the model.
+
+5. Run the **testing script** to classify hand gestures in real time:
+    ```bash
+    python test.py
+    ```
+    
+## Requirements
+
+- Python
+- TensorFlow
+- OpenCV
+- MediaPipe
+- cvzone
+
+Install all dependencies with:
+```bash
+pip install tensorflow opencv-python mediapipe cvzone numpy
+```
+## Folder Structure
+```bash
+├── Data/
+│   ├── A/     # Folder for images of alphabet A
+│   ├── B/     # Folder for images of alphabet B
+│   └── ...    # Folders for other alphabets
+├── DataCollection.py  # Script for collecting dataset images
+├── test.py       # Script for testing the model in real-time
+├── README.md           # This README file
+└── requirements.txt    # List of required dependencies
+```
+
+## Usage
+1. Data Collection
+- Ensure your webcam is connected.
+- Run the data_collection.py script to capture images of each alphabet gesture:
+```bash
+python data_collection.py
+```
+- Press 's' to save an image during capture. Images will be saved in folders corresponding to each alphabet.
+
+2. Model Training
+- Visit Google Teachable Machine.
+- Upload your captured dataset for training.
+- Train the model and export it.
+
+3. Testing
+- After training, use the test_model.py script to test the model with real-time hand gestures:
+```bash
+python test_model.py
+```
+
+Thank you for checking out this project! If you find it helpful, please consider giving it a ⭐️ on GitHub.
+
+
+
+
