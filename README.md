@@ -2,9 +2,11 @@
 This project focuses on real-time recognition of sign language alphabets, offering a seamless solution for bridging communication gaps between individuals who use sign language and those who do not. The system captures hand gestures via a webcam and classifies them into corresponding alphabets from the American Sign Language (ASL) alphabet.
 
 Problem Statement:
+
 Sign language is the primary method of communication for many people with hearing impairments. However, a significant communication barrier exists when interacting with people who are unfamiliar with sign language. This project aims to reduce this barrier by creating a system that can recognize and interpret sign language alphabets in real time, making it easier for non-signers to understand basic gestures without the need for a human translator.
 
 Approach:
+
 The system uses computer vision techniques to detect hand gestures, which are then classified into corresponding alphabetic characters. Key stages of the project include:
 
 Hand Detection: Using MediaPipe and OpenCV, the system identifies and tracks the hand in a live video stream from the user's webcam. It then crops and processes the hand image for classification.
@@ -21,9 +23,11 @@ Python: For the overall integration of various modules and building the project 
 Computer Vision: For hand tracking, preprocessing, and gesture recognition.
 CNN (Convolutional Neural Network): For accurate and efficient classification of sign language alphabets.
 Future Advancements:
+
 As part of future improvements, the project aims to implement a predictive model that can anticipate the next alphabet based on the current recognized hand gesture. This would further enhance communication by reducing the need for redundant gestures and improving prediction speed. Additionally, expanding the model to recognize full words or sentences by incorporating sign language grammar is another long-term goal.
 
 Key Features:
+
 Real-time Detection: The system processes live video feeds to detect and classify hand gestures instantaneously.
 Custom Dataset: Over 500-1000 images per alphabet are used to ensure robustness and accuracy of the model.
 Accurate Classification: With the help of a CNN, the model achieves efficient and accurate classification results.
