@@ -100,7 +100,7 @@ python data_collection.py
 - Train the model and export it.
 
 3. Testing
-- After training, use the test_model.py script to test the model with real-time hand gestures:
+- After training, create separate folder to save model and its labels after that use the test.py script to test the model with real-time hand gestures:
 ```bash
 python test_model.py
 ```
