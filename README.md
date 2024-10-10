@@ -80,6 +80,9 @@ pip install tensorflow opencv-python mediapipe cvzone numpy
 │   ├── B/     # Folder for images of alphabet B
 │   └── ...    # Folders for other alphabets
 ├── DataCollection.py  # Script for collecting dataset images
+├── Model/
+│   ├── keras_model.h5     # Trained model 
+│   ├── labels.txt
 ├── test.py       # Script for testing the model in real-time
 ├── README.md           # This README file
 └── requirements.txt    # List of required dependencies
